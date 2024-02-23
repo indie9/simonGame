@@ -1,0 +1,51 @@
+.select
+  cursor: pointer
+
+  &__wrapper
+    position: relative
+
+  &__selected-option
+    padding: 10px
+    border: 1px solid #ccc
+    border-radius: 5px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &--selected
+    color: gray
+
+    &--error
+      border-color: red
+
+  &__arrow
+    width: 20px
+    height: 20px
+    fill: #666
+    transition: transform 0.3s ease
+
+    &--rotated
+      transform: rotate(180deg)
+
+  &__options
+    z-index: 2
+    position: absolute
+    top: calc(100% + 5px)
+    width: 100%
+    background-color: #fff
+    border: 1px solid #ccc
+    border-radius: 5px
+    padding: 0
+    margin: 0
+    list-style-type: none
+
+    li
+      padding: 10px
+      cursor: pointer
+      transition: background-color 0.3s ease
+
+      &:hover
+        background-color: #f0f0f0
+
+      &--active
+        background-color: #cce5ff

@@ -1,0 +1,39 @@
+.game
+  display: flex
+  justify-content: center
+
+  &__board
+    width: 470px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 10px
+
+  &__result
+    background-color: #f0f0f0
+    color: #333
+    padding: 10px
+    border-radius: 5px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+  &__button
+    cursor: pointer
+    width: 230px
+    height: 230px
+    background-color: #ccc
+    border-radius: 5px
+    border: 2px solid gray
+
+    &.red
+      background-color: #FF0000
+
+    &.green
+      background-color: #66BB20
+
+    &.yellow
+      background-color: #FFEB3B
+
+    &.blue
+      background-color: #4283FD
+
+    &.active
+      filter: brightness(85%)
